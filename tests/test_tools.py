@@ -1,8 +1,12 @@
 """Unit tests for all four road safety tools."""
 import pytest
+
 from vision2030_sdg_agent.agent import DEFAULT_DATA
 from vision2030_sdg_agent.tools.domain import (
-    load_data, analyze_incidents, forecast_incidents, recommend_actions,
+    analyze_incidents,
+    forecast_incidents,
+    load_data,
+    recommend_actions,
 )
 
 
