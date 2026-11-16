@@ -96,3 +96,9 @@ The sample is synthetic, tiny, and not exposure-adjusted. The baseline is simply
 ```
 
 MIT licensed. See [CITATION.cff](CITATION.cff).
+
+## Web dashboard and Vercel
+
+The repository root [index.html](index.html) contains a zero-dependency, bilingual, responsive web dashboard. Vercel can host it as a static site by importing this repository with **Framework Preset: Other**, **Root Directory: .**, and no build command or output directory override. The dashboard parses up to 10,000 de-identified CSV records (2 MB maximum), displays incident counts by district and hour, provides human-reviewed SDG 3.6 / 11.2 suggestions, and exports a JSON report. It runs entirely in the browser and never uploads CSV contents to the hosting server. Use the **Analyze example** button to view the synthetic sample.
+
+**Important:** The static web dashboard uses deterministic JavaScript analysis, not the Anthropic Claude SDK. Claude agent tool use remains available via the Python CLI and requires ANTHROPIC_API_KEY for live use. Do not call the static dashboard a live Claude deployment or a validated risk predictor. For later server-side Claude integration, build authenticated endpoints with quotas and configure the key as a Vercel server environment variable, not in client JavaScript.
