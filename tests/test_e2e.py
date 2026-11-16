@@ -1,5 +1,6 @@
 """End-to-end bilingual CLI tests without API credentials."""
 from typer.testing import CliRunner
+
 from vision2030_sdg_agent.cli import app
 
 
